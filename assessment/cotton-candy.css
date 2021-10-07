@@ -1,0 +1,361 @@
+/* General Font Styles */
+:root {
+  --pink-primary: #FFBAD2;
+  --pink-secondary: #fcd7e4;
+  --standard-width: 80px;
+  --standard-height: 60px;
+  --button-font-size: 1rem;
+  --button-padding: 15px;
+  --button-margin: 5px;
+}
+
+body {
+  background-color:gray;
+  margin: 0px;
+  font-size: 16px;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.content {
+  padding: 15px;
+  line-height: 2rem;
+}
+
+.article {
+  padding: 30px;
+}
+
+ /* default header styles */
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+
+/* custom header styles */
+.header-main {
+  font-size:3rem;
+  width: auto;
+  margin: 0px;
+  padding: 20px;
+  color: var(--pink-primary);
+}
+
+.header {
+  font-size: 2rem;
+  color: var(--pink-primary);
+  padding: 50px;
+  background-color: var(--blue-primary);
+}
+
+.sub-header {
+  font-size: 1rem;
+  color: var(--pink-primary);
+  padding: 30px;
+  background-color: var(--blue-primary);
+}
+
+/* General Link Styles */
+a {
+  text-decoration: none;
+  color: var(--pink-secondary);
+}
+
+.nav-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+}
+
+.nav-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+}
+
+.nav-center {
+  display: flex;
+  flex-direction: row;
+  padding: 0% 10% 0% 10%;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+/* General List Styles */
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
+  padding: 0px 10px 0px 10px;
+}
+
+.list-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.list-item {
+  font-size: 1.6rem;
+  text-decoration: none;
+  list-style: none;
+  padding: 0px 20px 0px 20px;
+}
+
+.list-head {
+  font-weight: 700;
+  color: var(--pink-primary);
+  font-size: 2rem;
+}
+
+/* Button Styles */
+.button {
+  padding: var(--button-padding);
+  margin: var(--button-margin);
+}
+.confirm {
+  font-size: 1.2rem;
+  background-color: var(--pink-secondary);
+  padding: 6px 12px;
+  color: black;
+  border-style: none;
+  border-width: 1px;
+  border-radius: 5px;
+}
+.confirm:hover {
+  font-size: 1.2rem;
+  background-color: var(--pink-primary);
+  padding: 6px 12px;
+  color: black;
+  border-style: none;
+  border-width: 1px;
+  border-radius: 5px;
+}
+
+.warning {
+  min-width: var(--standard-width);
+  min-height: var(--standard-height);
+  font-size: var(--button-font-size);
+  padding: var(--button-padding);
+  margin: var(--button-margin);
+  background-color: yellow;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  border-radius: 5px;
+}
+
+.alert {
+  min-width: var(--standard-width);
+  min-height: var(--standard-height);
+  font-size: var(--button-font-size);
+  padding: var(--button-padding);
+  margin: var(--button-margin);
+  background-color: red;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  border-radius: 5px;
+}
+
+/* List Styles */
+
+/* Form Styles */
+.form {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
+}
+
+.input {
+  border-style: none;
+  border-radius: 5px;;
+  background-color: var(--pink-secondary);
+  padding: 6px 12px;
+}
+
+.input-fields {
+  float:right;
+}
+
+/* Checkbox Styles */
+.input-check {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.input-check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border: 1px solid var(--pink-secondary);
+  background-color: white;
+}
+
+/* On mouse-over, add a grey background color */
+.input-check:hover input ~ .checkmark {
+  background-color: var(--pink-secondary);
+}
+
+/* When the checkbox is checked, add a blue background */
+.input-check input:checked ~ .checkmark {
+  background-color: (var(--color-primary));
+  border: 1px solid var(--pink-secondary);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.input-check input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.input-check .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--pink-secondary);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Radio Button Styles ------------------------------------------------------------------------------------------*/
+/* The container */
+.input-radio {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.input-radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.radio-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  border: 1px solid var(--pink-secondary);
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.input-radio:hover input ~ .radio-button {
+  background-color: var(--pink-secondary);
+}
+
+/* When the radio button is checked, add a blue background */
+.input-radio input:checked ~ .radio-button {
+  background-color: (var(--color-primary));
+  border: 1px solid var(--pink-primary);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radio-button:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.input-radio input:checked ~ .radio-button:after {
+  display: block;
+  background-color: var(--pink-primary);
+}
+
+/* Style the indicator (dot/circle) */
+.input-radio .radio-button:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+table {
+  width: auto;
+  margin: 0px;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 15px;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+}
+
+td, th {
+  padding: 2rem 4.5rem 2rem 4.5rem;
+  border: 0px;
+  margin: 0px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--pink-primary);
+}
+td:hover, th:hover {
+  background-color: var(--pink-secondary);
+}
+/* Footer Styles */
+.footer {
+  padding: 50px;
+  background-color: black;
+  color:var(--pink-secondary);
+}
